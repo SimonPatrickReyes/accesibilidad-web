@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Donar · La Galería Ecléctica</title>
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar· La Galería Ecléctica</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
     <body class="expo-detalle">
     <header class="bg-verde-oscuro">
         <div class="cabecera-top">
@@ -18,12 +20,11 @@
             </div>
         </div>
         <a href="index.html">
-            <img src="assets/img/logo.png"/>
+            <img src="assets/img/logo.png" alt="LAGaEC Galería de Arte"/>
         </a>
         <nav class="navbar navbar-expand-lg navbar-light bg-verde-claro">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+                <span class="navbar-toggler-icon"></span> Pulsa aquí para desplegar el menú</button>
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="#">Colección </a>
@@ -55,7 +56,7 @@
                         <p class="mb-0">
                             La protección y promoción de la diversidad cultural y natural es uno de los grandes desafíos del siglo XXI.
                             A este respecto, los museos y colecciones son medios primordiales para salvaguardar los testimonios materiales e
-                            inmateriales de la naturaleza y las culturas humanas. 
+                            inmateriales de la naturaleza y las culturas humanas.
                         </p>
                         <footer class="blockquote-footer"> <cite>UNESCO, 17 de noviembre de 2015</cite></footer>
                     </blockquote>
@@ -71,19 +72,20 @@
                         Gracias por tu apoyo.
                     </p>
                     <form>
-                        <h3>Cantidad del donativo (EUR)</h3>
+                        <h2>Cantidad del donativo (EUR)</h2>
 
                         <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="unaVez" id="unaVez" value="option1" checked>
+                            <fieldset><legend>Opciones para donar</legend><input class="form-check-input" type="radio" name="opciones" id="unaVez" value="option1" checked>
                             <label class="form-check-label" for="unaVez">
                                 Una única vez
                             </label>
                         </div>
                         <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="mensual" id="mensual" value="option2">
+                            
+                            <input class="form-check-input" type="radio" name="opciones" id="mensual" value="option2">
                             <label class="form-check-label" for="mensual">
                                 Mensual
-                            </label>
+                            </label></fieldset>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Importe</label>
@@ -94,61 +96,60 @@
                                 <option>40€</option>
                                 <option>50€</option>
                                 <option>100€</option>
-
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Otra cantidad</label>
-                            <input type="password" class="form-control" placeholder="Escriba otro importe">
+                            <label for="otraCantidad">Otra cantidad</label>
+                            <input type="number" class="form-control" id="otraCantidad" placeholder="Escriba otro importe">
                         </div>
                         <hr>
                         <h3>Datos de facturación</h3>
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Escribe tu email">
+                            <label for="form_email">Email</label>
+                            <input type="form_email" class="form-control" id="form_email" placeholder="Escribe tu email">
                             <small class="form-text text-muted">Nunca compartiremos su correo electrónico con nadie.</small>
                         </div>
                         <div class="form-group">
-                            <label>Nombre </label>
-                            <input type="text" class="form-control" placeholder="Escribe tu nombre ">
+                            <label for="nombre">Nombre </label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre ">
                         </div>
                         <div class="form-group">
-                            <label>Apellidos </label>
-                            <input type="text" class="form-control" placeholder="Tu apellidos">
+                            <label for="apellidos">Apellidos </label>
+                            <input type="text" class="form-control" id="apellidos" placeholder="Tu apellidos">
                         </div>
 
                         <div class="form-group">
-                            <label>Dirección postal </label>
-                            <input type="text" class="form-control" placeholder="Tu dirección postal">
+                            <label for="direccionPostal">Dirección postal </label>
+                            <input type="text" class="form-control" id="direccionPostal" placeholder="Tu dirección postal">
                             <small class="form-text text-muted">Nunca compartiremos su dirección con nadie.</small>
                         </div>
 
                         <div class="form-group">
-                            <label>Teléfono </label>
-                            <input type="tel" class="form-control" placeholder="Teléfono">
+                            <label for="telefono">Teléfono </label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Teléfono">
                             <small class="form-text text-muted">Nunca compartiremos su teléfono con nadie más.</small>
                         </div>
                         <hr>
                         <h3>Datos de pago</h3>
                         <div class="form-group">
-                            <label>Número tarjeta</label>
-                            <input type="number" class="form-control" placeholder="Número de tarjeta">
+                            <label for="numeroTarjeta">Número tarjeta</label>
+                            <input type="number" class="form-control" id="numeroTarjeta" placeholder="Número de tarjeta">
                         </div>
                         <div class="form-group">
-                            <label>Data de expiración</label>
-                            <input type="text" class="form-control" placeholder="MM/AA">
+                            <label for="dataExpiracion">Data de expiración</label>
+                            <input type="text" class="form-control" id="dataExpiracion" placeholder="MM/AA">
                         </div>
                         <div class="form-group">
-                            <label>Código de verificación</label>
-                            <input type="number" class="form-control" placeholder="CCV">
+                            <label for="codigoVerificacion">Código de verificación</label>
+                            <input type="number" class="form-control" id="codigoVerificacion" placeholder="CCV">
                         </div>
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <label class="custom-control-label">Hago este donativo de manera anónima</label>
+                            <input type="checkbox" class="custom-control-input" id="anonimo">
+                            <label class="custom-control-label" for="anonimo">Hago este donativo de manera anónima</label>
                         </div>
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <label class="custom-control-label">Acepto expresamente la <a href="#">política de protección de datos </a></label>
+                            <input type="checkbox" class="custom-control-input" id="politica">
+                            <label class="custom-control-label" for="politica"><a href="#">Acepto expresamente la política de protección de datos</a></label>
                         </div>
                         <button type="submit" class="btn btn-secondary">Enviar</button>
                     </form>
@@ -162,48 +163,49 @@
         <div class="container pie">
             <h4>La Galería Ecléctica</h4>
             <a href="#">
-                Plaza del Poblenou, 1 <br>
+                Plaza del Poblenou, 1<br>
                 08018 Barcelona
             </a>
             <div class="rrss">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube-square"></i></a>
+                <a href="https://es-es.facebook.com/" aria-label="Link to Facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/" aria-label="Link to Twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/" aria-label="Link to Instagram"><i class="fab fa-instagram" ></i></a>
+                <a href="https://www.youtube.com/" aria-label="Link to Youtube"><i class="fab fa-youtube-square"></i></a>
             </div>
-
+    
             <form>
                 <h4>Suscríbete a nuestra Newsletter</h4>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Enter email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter email">
                 </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input">
-                    <label class="form-check-label">Acepto la <a href="#">Política de privacidad </a></label>
+                <div>
+                    <input type="checkbox" id="check"><label for="check"><a href="#">Acepto la Política de privacidad</a></label>
                 </div>
                 <button type="submit" class="btn btn-secondary">Registrarme</button>
             </form>
             <a href="index.html" class="logo">
-                <img src="assets/img/logo.png"/>
+                <img src="assets/img/logo.png" alt="LAGaEC Galería de Arte"/>
             </a>
             <nav class="navbar navbar-expand-lg navbar-light bg-verde-claro">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Quiénes somos</a>
+                    <a class="nav-item nav-link" href="#">Quiénes somos</a>
                     <a class="nav-item nav-link" href="#">Política de Privacidad</a>
                     <a class="nav-item nav-link" href="#">Aviso Legal</a>
                     <a class="nav-item nav-link" href="#">Cookies</a>
                 </div>
             </nav>
-
+    
         </div>
         <div class="creditos">
-            <h6>Créditos</h6>
+            <h5>Créditos</h5>
             <p>© LAGaEC. Imágenes de las obras artísticas de dominio público,
                 <a href="https://www.metmuseum.org/art/collection/search#!?searchField=All&showOnly=openAccess&sortBy=relevance&offset=0&pageSize=0">The Metropolitan Museum</a>.
                 Fotografías, <a href="https://unsplash.com">Unsplash</a>
                 Actividad para comprobar la Accesibilidad Web, para el módulo de Diseño de Interfaces Web.
                 IES Rafael Alberti - 2022/2023</p>
         </div>
+    
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
